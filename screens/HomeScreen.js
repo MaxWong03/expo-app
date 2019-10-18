@@ -8,11 +8,15 @@ import {
   Text,
   TouchableOpacity,
   View,
+  Button
 } from 'react-native';
 
 import { MonoText } from '../components/StyledText';
 
+import { useNavigation } from 'react-navigation-hooks';
+
 export default function HomeScreen() {
+  const { navigate } = useNavigation();
   return (
     <View style={styles.container}>
       <ScrollView
@@ -39,9 +43,11 @@ export default function HomeScreen() {
             <MonoText>screens/HomeScreen.js</MonoText>
           </View>
 
-          <Text style={styles.getStartedText}>
-            I am andrew
-          </Text>
+          <Button
+            title="Go to Details"
+            onPress={() => navigate('Details')}
+          />
+
         </View>
 
         <View style={styles.helpContainer}>
