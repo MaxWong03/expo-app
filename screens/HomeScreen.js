@@ -43,6 +43,10 @@ export default function HomeScreen() {
             <MonoText>screens/HomeScreen.js</MonoText>
           </View>
 
+          <Text style={styles.getStartedText}>
+            Change this text and your app will automatically reload.
+          </Text>
+
           <Button
             title="Go to Details"
             onPress={() => navigate('Details')}
